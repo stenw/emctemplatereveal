@@ -1,0 +1,30 @@
+title: Emctemplaterevel
+version: 1.0.1
+quarto-required: ">=1.5.0"
+contributes:
+  formats:
+    revealjs:
+      template-partials:
+        - title-slide.html
+      title-slide-attributes:
+        data-background-image: "www/eebuildingdbluescreensize.jpg"  
+      margin: 0.01
+      filters:
+        - copy-resources.lua
+        - color-text.lua 
+        - bg-style.lua 
+      theme: [default, emctemplatereveal.scss]
+      menu:
+        side: left
+        slide-number: true
+      format-resources:
+        - triangle1.svg
+        - triangleb.svg
+        - eebuildingdbluelogo.jpg
+  revealjs-plugins:
+    - name: RevealEmctemplatereveal
+      script:
+        - emctemplatereveal.js
+      stylesheet:
+        - emctemplatereveal.css
+
