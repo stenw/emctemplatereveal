@@ -10,9 +10,9 @@ end
 
 function Header(el)
 
-  copyResource('triangle1.svg')
-  copyResource('trianglelb.svg')
-  copyResource('eebuildingdbluelogo.jpg')
+  -- copyResource('templateassets/triangle1.svg')
+  -- copyResource('templateassets/trianglelb.svg')
+  -- copyResource('templateassets/eebuildingdbluescreensize.jpg')
 
   return el
 

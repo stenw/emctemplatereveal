@@ -1,0 +1,59 @@
+---
+title: "Example"
+subtitle: of EMC template
+execute:
+  keep-md: true
+author:
+  name: Sten Willemsen
+  affiliation: 
+    - name: Erasmus MC
+      department: Epidemiology
+  orcid: 0000-0002-1675-2931
+  email: s.willemsen@erasmusmc.nl
+date: 11-20-2023
+format:
+  emctemplatereveal-revealjs:
+    toc: true
+    toc-depth: 1
+    chalkboard: true
+    menu: true
+---
+
+```{r include=FALSE}
+library(knitr)
+library(dplyr)
+library(kableExtra)
+library(latex2exp)
+EMC_lightblue <- rgb(126, 207, 226, maxColorValue = 255)
+EMC_darkblue <- rgb(12, 32, 116, maxColorValue = 255)
+```
+
+
+# Choice of model {data-background="./templateassets/lbback.svg" class="center"} 
+
+## Models for prediction {.trianglelb}
+
+$$
+\begin{align}
+y &= f(X) + \epsilon \\
+\hat{y} &= \hat{f}(\hat{\beta}, X)
+\end{align}
+$$
+
+* $f$ unobserved function, $\epsilon$ random error
+* We want to estimate $\hat{\beta}$  so $\hat{y}$ is 'close' to $y$
+* using sample $X, y$
+
+* How to choose $\hat{f}$
+* To evaluate if $\hat{y}$ is close to $y$, $\hat{y}$ should be able to take the **same kind of values** as $y$
+
+* Regression problem / Supervised learning
+
+## Models for prediction {.trianglelb}
+
+* The [**type of outcome**]{color="#0c2074"} determines what kind of models can be used
+  - **Continuous** (Blood pressure)
+  - **Dichotomous** (Live birth yes or no)
+  - **Categorical** (Tumor type)
+  - **Ordinal** (Adverse event grade)
+  - **Time-To-Event** (ICU time)
